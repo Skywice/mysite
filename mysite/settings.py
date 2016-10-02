@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 """
 Django settings for mysite project.
 
@@ -9,6 +10,7 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
+
 
 import os
 
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'  # 设定上海时间
 
 USE_I18N = True
 

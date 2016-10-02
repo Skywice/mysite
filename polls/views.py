@@ -3,10 +3,10 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from .models import Question
+
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
@@ -15,7 +15,6 @@ def index(request):
         'latest_question_list':latest_question_list
     }
     return HttpResponse(template.render(context, request))
-
 # just write more views
 # three functions: detail and results of each question
 # vote for choices for each question
