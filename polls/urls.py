@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.conf.urls import url
-from . import views_old
+from . import views
 
 app_name = 'polls'
 '''
@@ -18,9 +18,9 @@ urlpatterns = [
 '''
 # 修改之后
 urlpatterns = [
-    url(r'^$', views_old.IndexView.as_view(), name='index'),
-    url(r'^(?P<pk>[0-9]+)/$', views_old.DetailView.as_view(), name='detail'),
-    url(r'^(?P<pk>[0-9]+)/results/$', views_old.ResultsView.as_view(), name='results'),
-    url(r'^(?P<question_id>[0-9]+)/vote/$', views_old.vote, name='vote'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
+    url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
+    url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
 
 ]
